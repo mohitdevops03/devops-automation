@@ -23,9 +23,9 @@ pipeline{
         steps{
             script{
                 withCredentials([string(credentialsId: 'acrpwd', variable: 'acrpwd')]) {
-                sh 'docker login argocdpoc.azurecr.io/app/v1.02 -u Argocdpoc -p ${acrpwd}' 
+                sh 'docker login argocdpoc.azurecr.io/app/v1.03 -u Argocdpoc -p ${acrpwd}' 
 }
-                sh 'docker push argocdpoc.azurecr.io/app/v1.02'
+                sh 'docker push argocdpoc.azurecr.io/app/v1.03'
             }
         }
       }
